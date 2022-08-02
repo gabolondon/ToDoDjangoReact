@@ -6,6 +6,6 @@ class TodoSerializers(serializers.ModelSerializer):
     
     class Meta:
         model= Todo
-        fields='__all'
+        fields='__all__'
         verbose_name = 'Todo'
         verbose_name_plural = 'Todos'
