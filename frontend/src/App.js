@@ -27,8 +27,8 @@ function App() {
         </Container>
       </Navbar>
       <Container>
-        <TodoForm/>
-        <TodoList todos= {todos}/>
+        <TodoForm todos={todos} setTodos={setTodos}/>
+        <TodoList todos= {todos} setTodos={setTodos}/>
       </Container>
       
     </div>
