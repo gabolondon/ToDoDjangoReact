@@ -1,9 +1,23 @@
+import axios from "axios";
 import React from "react";
 import ListGroup from 'react-bootstrap/ListGroup';
 import { MdCheckBox, MdCheckBoxOutlineBlank, MdEdit, MdDelete } from 'react-icons/md'
 
 export default function TodoList({todos=[]}){
-
+    const handleUpdate= async(id, value) =>{
+        return axios.patch('/api/todos/${id}', value)
+            .then((res)=>{
+                const { data }= res;
+                const newTodos = todos.map(t =>{
+                    if (i.id===id){
+                        return data;
+                    }
+                    return t;    
+                    
+                })
+            }
+            )
+    }
     const renderListGroupItem = (t) => {
         return <ListGroup.Item 
                 key={t.id}
