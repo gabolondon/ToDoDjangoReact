@@ -14,7 +14,7 @@ export default function TodoList({todos=[], setTodos}){
         setShow(false);
     }
     const handleDelete= (id)=>{
-        axios.delete(`api/todos/${id}/`)
+        axios.delete(`https://gabolondon-improved-enigma-6xjpr7r5747356w7-8000.preview.app.github.dev/api/todos/${id}/`)
         .then(()=>{
             const newTodos= todos.filter((t)=>{
                 return t.id !== id
